@@ -32,11 +32,6 @@ body {
 
 //COMPONENTS
 
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-}
-
 .altcoins {
   letter-spacing: 0.5px;
   position: absolute;
@@ -68,11 +63,10 @@ body {
 
   &__col {
 
+
     &--1 {
       flex-grow: 1;
-      border-left: 1px solid $grey-color;
-      padding-top: 1.4rem;
-      min-width: 7rem;
+      @extend %col-1-2;
 
       &:last-child {
         padding-top: 0.5rem;
@@ -80,15 +74,12 @@ body {
     }
     &--2 {
       flex-grow: 2;
-      border-left: 1px solid $grey-color;
-      padding-top: 1.4rem;
-      min-width: 10.2rem;
+      @extend %col-1-2;
     }
     &--3 {
-      flex-grow: 3;
+      flex-grow: 2;
       text-align: left;
       padding: 0 9rem 0 3.5rem;
-      max-width: 32rem;
     }
   }
 }
@@ -101,7 +92,15 @@ body {
   display: inline-block;
 }
 
-//BUTTON
+.nums {
+  font-size: 2rem;
+
+  &--red {
+    color: #D83550;
+  }
+}
+
+//BUTTONS
 
 .btn {
   &,
@@ -141,6 +140,11 @@ body {
 }
 
 //UTILITIES
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
 .mb-2 {
   margin-bottom: 1.5rem;
 }
@@ -161,7 +165,12 @@ body {
   display: block;
 }
 
-//mixins
+//MIXINS & EXTENDS
+
+%col-1-2 {
+  border-left: 1px solid $grey-color;
+  padding-top: 1.4rem;
+}
 
 @mixin clearfix {
     &::after {
@@ -177,14 +186,6 @@ body {
   font-weight: 400;
 }
 
-.nums {
-  font-size: 2rem;
-
-  &--red {
-    color: #D83550;
-  }
-}
-
 //MEDIA
 
 @media (max-width: 1060px) {
@@ -196,8 +197,13 @@ body {
 
   .currency-row {
     &__col {
+
+      &--1,
+      &--2 {
+        padding-top: 0.6rem;
+      }
       &--3 {
-        padding: 0 3rem 0 3rem;
+        padding: 0 1.5rem 0 3rem;
       }
     }
   }
@@ -221,20 +227,27 @@ body {
     }
 
     .currency-row {
-      display: block;
+      flex-wrap: wrap;
       height: 24.5rem;
 
       &__col {
-        &--1 {
-          float: left;
-        }
-
+        &--1,
         &--2 {
-          float: left;
+          padding-top: 1.4rem;
+          flex-grow: 1;
         }
 
         &--3 {
-          max-width: 48rem;
+          width: 100%;
+
+          &::after {
+            display: block;
+            margin: 0 auto;
+            height: 1px;
+            width: 100%;
+            background-color: $grey-color;
+            content: "";
+          }
         }
       }
     }
@@ -245,7 +258,7 @@ body {
         width: 100%;
         text-align: center;
         margin-top: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
     }
 
@@ -265,4 +278,15 @@ body {
         @include clearfix;
       }
     }
+}
+
+@media (max-width: 396px) {
+  .currency-row {
+
+    &__col {
+      &--3 {
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
 }
