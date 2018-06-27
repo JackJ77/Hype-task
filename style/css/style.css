@@ -67,6 +67,10 @@ body {
     font-size: 2rem; }
     .currency-row__num--red {
       color: #D83550; }
+  .currency-row__fa {
+    font-size: 1.4rem;
+    color: #D8D8D8;
+    cursor: pointer; }
 
 .dot {
   width: 7px;
@@ -92,14 +96,11 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#D22D4F), to(#F86358));
   background: linear-gradient(90deg, #D22D4F 0%, #F86358 100%); }
 
-.fa {
-  font-size: 1.4rem;
-  color: #D8D8D8;
-  cursor: pointer; }
-  .fa-balance-scale:hover {
-    color: #00b0fc; }
-  .fa-eye:hover {
-    color: #38e814; }
+.fa-balance-scale:hover {
+  color: #00b0fc; }
+
+.fa-eye:hover {
+  color: #38e814; }
 
 .container {
   max-width: 120rem;

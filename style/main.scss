@@ -104,6 +104,12 @@ body {
       color: #D83550;
     }
   }
+
+  &__fa {
+    font-size: 1.4rem;
+    color: $grey-color;
+    cursor: pointer;
+  }
 }
 
 .dot {
@@ -141,19 +147,13 @@ body {
 
 //ICONS
 
-.fa {
-  font-size: 1.4rem;
-  color: $grey-color;
-  cursor: pointer;
-
-  &-balance-scale:hover {
+  .fa-balance-scale:hover {
     color: $blue-icon;
   }
 
-  &-eye:hover {
+  .fa-eye:hover {
     color: $green-icon;
   }
-}
 
 //UTILITIES
 .container {
