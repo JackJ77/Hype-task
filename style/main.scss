@@ -96,6 +96,14 @@ body {
       padding: 0 9rem 0 3.5rem;
     }
   }
+
+  &__num {
+    font-size: 2rem;
+
+    &--red {
+      color: #D83550;
+    }
+  }
 }
 
 .dot {
@@ -104,14 +112,6 @@ body {
   border-radius: 50%;
   background-color: $yellow-color;
   display: inline-block;
-}
-
-.nums {
-  font-size: 2rem;
-
-  &--red {
-    color: #D83550;
-  }
 }
 
 //BUTTONS

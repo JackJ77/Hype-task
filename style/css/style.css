@@ -63,6 +63,10 @@ body {
     flex-grow: 2;
     text-align: left;
     padding: 0 9rem 0 3.5rem; }
+  .currency-row__num {
+    font-size: 2rem; }
+    .currency-row__num--red {
+      color: #D83550; }
 
 .dot {
   width: 7px;
@@ -70,11 +74,6 @@ body {
   border-radius: 50%;
   background-color: #FFBE33;
   display: inline-block; }
-
-.nums {
-  font-size: 2rem; }
-  .nums--red {
-    color: #D83550; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
